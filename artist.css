@@ -1,0 +1,167 @@
+
+
+body {
+	scroll-behavior: smooth;
+	background-image: url(/Portfolio/img/star\ back.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	justify-content: center;
+	color: white;
+}
+img {
+	display: block;
+	width: 100%;
+
+}
+
+.navbar-brand {
+	font-size: 30px;
+}
+
+.navbar a:hover {
+	color: red
+		/* border-bottom: 2px black solid; */
+}
+
+#info {
+	/* background-color: aqua; */
+	padding: 20px;
+}
+
+#music {
+	/* background-color: green; */
+	padding: 30px
+}
+
+#videos {
+	/* background-color: blueviolet; */
+	padding: 20px
+}
+
+#follow {
+	/* background-color: blue; */
+	padding: 20px
+}
+
+.nav-link {
+	color: white;
+}
+
+.infotxt {
+	font-size: 20px;
+	text-align: center;
+	margin-top: 50px;
+	
+
+}
+
+.container {
+	max-width: 100%;
+
+}
+
+.cont1 {
+	background-image: url(/Portfolio/img/notebook2.png);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: black;
+	/* background-position: center; */
+	/* background-size: 100%; */
+	/* background-repeat: no-repeat; */
+	/* object-fit:cover; */
+}
+
+.music {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+.card-body {
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+}
+
+a :hover {
+	color: red;
+}
+
+.footer {
+	position: sticky;
+	bottom: 0;
+	margin: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+	.container {
+		max-width: 90%;
+	}
+
+	h3.infotxt {
+		font-size: 15px;
+		text-align: left;
+		margin: 20px;
+		margin-left: 30px;
+		color: green;
+	} 
+	.zili {
+	max-width: 100%;
+	margin-top: 10px;
+
+	}
+
+}
+@media screen and (min-width: 820px) {
+
+	h3.infotxt {
+		font-size: 17px;
+		margin: 20px;
+		margin-left: 35px;
+		color:rgb(53, 194, 236);
+		
+
+	}
+
+ }
+ 
+@media screen and (min-width: 1024px) {
+
+	h3.infotxt {
+		font-size: 20px;
+		margin: 40px;
+		margin-left: 50px;
+	
+	
+		color: blue;
+
+
+	}
+
+}
+
+
+/* @media screen and (min-width: 1200px) {
+
+	h3.infotxt {
+		font-size: 28px;
+		margin: 20px;
+		color: rgb(214, 226, 43);
+		margin-top: 50px;
+		margin-left: 50px;
+
+	}
+
+	.zili {
+		margin-top: 30px;
+	}
+
+} */
