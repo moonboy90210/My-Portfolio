@@ -1,27 +1,41 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&family=Nanum+Brush+Script&family=Sacramento&display=swap');
 
 body {
-	scroll-behavior: smooth;
+
+	font-style: normal;
 	background-image: url(/Portfolio/img/star\ back.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
 	justify-content: center;
 	color: white;
+	scroll-behavior: smooth;
 }
+
+h2 {
+	font-family: "Orbitron", sans-serif;
+}
+
 img {
 	display: block;
 	width: 100%;
+}
 
+.nav-link {
+	color: white;
+	font-family: "Orbitron", sans-serif;
+	font-size: 1.5rem;
 }
 
 .navbar-brand {
-	font-size: 30px;
+	font-family: "Orbitron", sans-serif;
+	font-size: 2.3rem;
 }
 
 .navbar a:hover {
 	color: red
-		/* border-bottom: 2px black solid; */
+	/* border-bottom: 2px black solid; */
 }
 
 #info {
@@ -31,7 +45,7 @@ img {
 
 #music {
 	/* background-color: green; */
-	padding: 30px
+	padding: 20px
 }
 
 #videos {
@@ -44,21 +58,16 @@ img {
 	padding: 20px
 }
 
-.nav-link {
-	color: white;
-}
-
 .infotxt {
-	font-size: 20px;
+	font-family: "Contrail One", sans-serif;
+	/* font-weight: 700; */
+	font-size: 1.5rem;
 	text-align: center;
-	margin-top: 50px;
-	
-
+	margin-top: 40px;
 }
 
 .container {
 	max-width: 100%;
-
 }
 
 .cont1 {
@@ -101,67 +110,72 @@ a :hover {
 
 
 @media screen and (min-width: 768px) {
-
 	.container {
 		max-width: 90%;
 	}
 
-	h3.infotxt {
-		font-size: 15px;
+	p.infotxt {
+		font-size: 0.9rem;
 		text-align: left;
-		margin: 20px;
 		margin-left: 30px;
-		color: green;
-	} 
-	.zili {
-	max-width: 100%;
-	margin-top: 10px;
-
+		/* color: red; */
 	}
-
 }
-@media screen and (min-width: 820px) {
 
-	h3.infotxt {
-		font-size: 17px;
-		margin: 20px;
+@media screen and (min-width: 880px) {
+	p.infotxt {
+		font-size: 1.1rem;
 		margin-left: 35px;
-		color:rgb(53, 194, 236);
-		
-
+		/* color: rgb(53, 194, 236); */
 	}
-
- }
- 
-@media screen and (min-width: 1024px) {
-
-	h3.infotxt {
-		font-size: 20px;
-		margin: 40px;
-		margin-left: 50px;
-	
-	
-		color: blue;
-
-
-	}
-
 }
 
+@media screen and (min-width: 912px) {
+	p.infotxt {
+		font-size: 1.1rem;
+		margin-left: 30px;
+		/* color: blue; */
+	}
+}
 
-/* @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+	p.infotxt {
+		font-size: 1.2rem;
+		margin-top: 12%;
+		margin-left: 45px;
+		/* color: brown; */
+	}
+}
 
-	h3.infotxt {
-		font-size: 28px;
-		margin: 20px;
-		color: rgb(214, 226, 43);
-		margin-top: 50px;
+@media screen and (min-width: 1255px) {
+	p.infotxt {
+		font-size: 1.6rem;
 		margin-left: 50px;
-
+		margin-top: 12%;
+		/* color: purple; */
 	}
+}
 
-	.zili {
-		margin-top: 30px;
+@media screen and (min-width: 1550px) {
+	p.infotxt {
+		font-size: 1.95rem;
+		margin-left: 65px;
+		/* color: yellow; */
 	}
+}
 
-} */
+@media screen and (min-width: 1920px) {
+	p.infotxt {
+		font-size: 2.3rem;
+		margin-left: 90px;
+		/* color: orange; */
+	}
+}
+
+@media screen and (min-width: 2220px) {
+	p.infotxt {
+		font-size: 3rem;
+		margin-left: 65px;
+		/* color: orange; */
+	}
+}

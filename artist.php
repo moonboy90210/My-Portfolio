@@ -1,6 +1,29 @@
 <?php
 session_start();
 
+include("data.php");
+
+if (isset($_POST["submit"])) {
+    $newSub = htmlspecialchars($_POST['newSub']);
+ 
+    if (empty("submit")) {
+
+        echo "<Script> alert('Kindly input your Email') </script>";
+
+        header("Location:../artist.php");
+    } else {
+        echo "<script> Please wait while we update your information </script>";
+    }
+
+    $query = "INSERT INTO newsubz VALUES ('','$newSub')";
+    mysqli_query($con, $query);
+
+
+    echo "<script> alert('You have subscribed successfully. Kindly check your email for updates')</script>";
+	exit;
+	
+}
+
 
 $image_url = '/Portfolio/img/newwwww.png'
 
@@ -46,7 +69,7 @@ $image_url = '/Portfolio/img/newwwww.png'
 							</li> -->
 						</ul>
 					</div>
-				</div>
+				</div> 
 			</div>
 
 		</nav>
@@ -54,12 +77,12 @@ $image_url = '/Portfolio/img/newwwww.png'
 			<div class="container">
 				<div class="row cont1">
 					<div class="col-md-6">
-						<h3 class="infotxt">
+						<p class="infotxt">
 							<strong>TAZII</strong> is a budding Trap artiste born and raised in Nigeria. He discovered his flare for rap while freestyling with the guys back in UNI.
 							Now, he's developed his sound and came into the scene with his debut single "Bando Basic" which has received much critical acclaim.
 							While Hip-Hop/Rap is his main MO, he has delved into different genres and successfully fused his "trap boy vibe" in the mix to deliver outstanding records.
 							As he evolves, you get to see the diverse catalogue this talent has to offer.
-						</h3>
+						</p>
 
 					</div>
 					<div class="col-md-6">
@@ -75,30 +98,30 @@ $image_url = '/Portfolio/img/newwwww.png'
 			<div class="container ">
 				<h2 class="p-3">MUSIC</h2>
 				<div class="row">
-					<div class="col-md-4 g-3 music ">
+					<div class="col-md-4 g-3 music">
 						<div class="card border-0 bg-transparent" style="width: 100%;">
-							<img src="/Portfolio/img/WEIGH ART.jpg" class="card-img-top" alt="Weigh art">
+							<img src="/Portfolio/img/WEIGH ART.jpg" class="card-img-top rounded" alt="Weigh art">
 							<div class="card-body">
-								<h3>WEIGH</h3>
+								<h5>WEIGH</h5>
 								<a class="btn btn-outline-light" href="https://tr.ee/qaU4n-_RlX" role="button">GET IT HERE</a>
 							</div>
 						</div>
 
 					</div>
 					<div class="col-md-4 g-3 music">
-						<div class="card border-0 bg-transparent" style="width: 100%;">
-							<img src="/Portfolio/img/BANDO basic.jpg" class="card-img-top" alt="Bando Basic art">
+						<div class="card border-0  bg-transparent" style="width: 100%;">
+							<img src="/Portfolio/img/BANDO basic.jpg" class="card-img-top rounded" alt="Bando Basic art">
 							<div class="card-body">
-								<h3>Bando Basic</h3>
+								<h5>Bando Basic</h5>
 								<a class="btn btn-outline-light" href="https://tr.ee/Ylll9K7cvQ" role="button">GET IT HERE</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 g-3 music">
 						<div class="card border-0 bg-transparent" style="width: 100%;">
-							<img src="/Portfolio/img/S&S.PNG" class="card-img-top" alt="Shuga & Spyce art">
+							<img src="/Portfolio/img/S&S2.PNG" class="card-img-top rounded" alt="Shuga & Spyce art">
 							<div class="card-body">
-								<h3>Shuga & Spyce</h3>
+								<h5>Shuga & Spyce</h5>
 								<a class="btn btn-outline-light" href="https://tr.ee/nk7dXoEPQ1" role="button">GET IT HERE</a>
 							</div>
 						</div>
@@ -135,10 +158,10 @@ $image_url = '/Portfolio/img/newwwww.png'
 				<h5>Follow TAZII on all Socials and Subcribe to get the latest News and Music Updates.</h5>
 				<div class="row justify-content-center">
 					<div class="col-md-6 my-4">
-						<form method="post" action="data.php">
+						<form method="post">
 							<div class="input-group">
-								<input type="email" class="form-control" placeholder="Enter Email" aria-label="Email" aria-describedby="button-addon2" required>
-								<button class="btn btn-outline-light" type="button" name="submit" id="button-addon2">Subscribe</button>
+								<input type="email" name="newSub" class="form-control" placeholder="Enter Email" aria-label="Email" aria-describedby="button-addon2" required>
+								<button class="btn btn-outline-light" type="submit" name="submit" value="submit" id="button-addon2">Subscribe</button>
 							</div>
 						</form>
 					</div>

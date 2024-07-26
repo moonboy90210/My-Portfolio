@@ -1,70 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Contrail+One&family=Nanum+Brush+Script&family=Sacramento&display=swap');
 
 .navbar-brand {
-    font-size: 30px;
-   
+  font-size: 2.5rem;
+}
+.navbar {
+  font-size: 1.5rem;
 }
 .navbar a:hover {
-    border-bottom: 2px #333 solid;
+  border-bottom: 2px #333 solid;
+
 }
-#navbarID {
-    font-size: 20px;
-    padding: 30px;
+
+
+
+.container {
+	max-width: 90%;
 }
-img { 
-    width: 100%;
-   
-}
-.bio {
- background-color: lightgrey;
- /* min-width: 80%; */
- /* display: flex;
- justify-content: center; */
-}
+
 .btn:hover {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
+
 .future {
-    position: relative;
-   
-  }
-  
-  .image1 {
-    opacity: 1;
-    display: block;
-    
-    /* height: auto; */
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  #inquire {
-    background-color: lightgrey;
-    
+  position: relative;
+}
+
+.image1 {
+  opacity: 1;
+  display: block;
+  /* height: auto; */
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.bio {
+  background-color: lightgrey;
+  font-family: "Boogaloo", sans-serif;
+  font-size: 1.8rem;
+}
+
+
+.inquire {
+  background-color: lightgrey;
+  padding: 30px;
+
+}
+/* hr.featurette-divider {
+  max-width: 150%;
+  margin: 15px;
  
-  }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .future:hover .image1 {
-    opacity: 0.3;
-  }
-  
-  .future:hover .middle {
-    opacity: 1;
-  }
-  
-  .text1 {
-   background-color: black;
-    color: white;
-    font-size: 16px;
-    padding: 10px 25px;
-    border-radius: 50px;
-  }
+} */
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.future:hover .image1 {
+  opacity: 0.3;
+}
+
+.future:hover .middle {
+  opacity: 1;
+}
+
+.text1 {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 50px;
+}

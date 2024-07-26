@@ -1,5 +1,30 @@
 <?php
-session_start()
+session_start();
+
+include("data.php");
+
+if (isset($_POST["submit"])) {
+	$name = htmlspecialchars($_POST['name']);
+	$organization = htmlspecialchars($_POST['organization']);
+	$email = htmlspecialchars($_POST['email']);
+	$subject = htmlspecialchars($_POST['subject']);
+	$message = htmlspecialchars($_POST['message']);
+
+	$query = "INSERT INTO runway VALUES ('','$name','$organization','$email','$subject','$message')";
+	mysqli_query($con, $query);
+
+	if (empty("submit")) {
+
+		echo "<Script> alert('Kindly input your Email') </script>";
+	} else {
+		echo "<script> alert('Thank you for reaching out! I will be in touch as soon as possible.')</script>";
+	}
+
+	header("Location: model.php");
+	exit;
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -57,36 +82,39 @@ session_start()
 						<span class="visually-hidden">Next</span>
 					</button>
 				</div>
-				<hr>
+
 			</div>
 		</section>
-
+		<hr class="container">
 		<section id="bio">
-			<div class="container p-5">
+			<div class="container bio p-5">
 				<div class="row">
-					<div class="col-6">
-						<h3 class="text-start ps-3">BIO</h3>
-						<ol>
+					<!-- <div class="col-4">
+						
+					</div> -->
+					<div class="col-md-6 ">
+						<!-- <img src="/portfolio/img/passport.png" class="m-3" width="auto" height="auto" alt="Bio Passport"> -->
+						<ul class="pt-2">
+							<h3 class="p-3">BIO</h3>
 							<li>
-								<p><strong>Height</strong>: 1.86M</p>
+								<p>Height: 1.86M</p>
 							</li>
 							<li>
-								<p><strong>Weight</strong>: 141 lbs</p>
+								<p>Weight: 141 lbs</p>
 							</li>
 							<li>
-								<p><strong>Eye Color</strong>: Black</p>
+								<p>Eye Color: Black</p>
 							</li>
 							<li>
-								<p><strong>Hair Color</strong>: Black</p>
+								<p>Hair Color: Black</p>
 							</li>
-						</Ol>
+						</ul>
 
 					</div>
 
-					<div class="col-md-6">
-						<h3 class="text-start ps-3">SKILLSET</h3>
-						<p>
-						<ul>
+					<div class="col-md-6 ">
+						<ul class="pt-2">
+							<h3 class="p-3">SKILLSET</h3>
 							<li>
 								Strong interpersonal communication
 							</li>
@@ -110,17 +138,14 @@ session_start()
 							</li>
 
 						</ul>
-						</p>
 					</div>
 
 				</div>
 			</div>
 		</section>
-
+		<hr class="container">
 		<section>
 			<div class="container">
-				<hr class="featurette-divider">
-
 				<div class="row featurette">
 					<div class="col-md-7">
 						<h2 class="featurette-heading">TAZII FOR GQ </h2>
@@ -132,7 +157,7 @@ session_start()
 					<div class="col-md-5 future">
 						<img src="/portfolio/img/stand.jpg" alt="" class="image1 rounded" width="100%" height="100%">
 						<div class="middle">
-							<a class="btn btn-outline-dark mb-3" href="tazSalty.php#col2" target="_blank" role="button">View More</a>
+							<a class="btn btn-outline-dark mb-3" href="tazSalty.php#col2" target="_blank" role="button">View Collection</a>
 						</div>
 
 					</div>
@@ -152,11 +177,11 @@ session_start()
 					<div class="col-md-5 order-md-1 future">
 						<img src="/portfolio/img/DSC00244.jpg" alt="" class="image1 rounded-2" width="100%" height="auto">
 						<div class="middle">
-							<a class="btn btn-outline-dark mb-3" href="tazFotc.php" target="_blank" role="button">View More</a>
+							<a class="btn btn-outline-dark mb-3" href="tazFotc.php" target="_blank" role="button">View Collection</a>
 						</div>
 					</div>
 				</div>
-				<hr>
+				<hr class="featurette-divider">
 
 				<div class="row featurette">
 					<div class="col-md-7 ">
@@ -169,12 +194,12 @@ session_start()
 					<div class="col-md-5 future">
 						<img src="img/IMG_5041.jpg" alt="" class="image1 rounded" width="100%" height="100%">
 						<div class="middle">
-							<a class="btn btn-outline-dark mb-3" href="tazSalty.php" target="_blank" role="button">View More</a>
+							<a class="btn btn-outline-dark mb-3" href="tazSalty.php" target="_blank" role="button">View Collection</a>
 						</div>
 
 					</div>
 				</div>
-				<hr>
+				<hr class="featurette-divider">
 
 				<div class="row featurette">
 					<div class="col-md-7 order-md-2">
@@ -194,35 +219,43 @@ session_start()
 				</div>
 
 			</div>
+
 		</section>
-		<hr>
+		<hr class="container">
 		<section id="inquire">
 			<div class="container inquire">
-				<form action="action_page.php" method="post">
-					<h4>INterested in a collaboration or working</h4>
+				<form method="post">
+					<h2>Interested in working or collaborating? Get in touch! </h2>
 					<div class="row">
-						<div class="col-6">
+						<div class="col-md-6 g-3">
 							<label for="exampleFormControlInput1" class="form-label"></label>
-							<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" require>
+							<input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="Full Name" required>
 						</div>
-						<div class="col-6">
+						<!-- <div class="col-6">
 							<label for="exampleFormControlInput1" class="form-label"></label>
-							<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" require>
-						</div>
-						<div class="col-12">
+							<input type="text" class="form-control" id="exampleFormControlInput1" name="organization" placeholder="Agency" required>
+						</div> -->
+						<div class="col-md-6 g-3">
 							<label for="exampleFormControlInput1" class="form-label"></label>
-							<input type="subjectl" class="form-control" id="exampleFormControlInput1" placeholder="Subject">
+							<input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="Email" required>
 						</div>
-						<div class="col-12">
+						<div class="col-12 g-3">
+							<label for="exampleFormControlInput1" class="form-label"></label>
+							<input type="subjectl" class="form-control" id="exampleFormControlInput1" name="subject" placeholder="Subject" required>
+						</div>
+						<div class="col-12 g-3">
 							<label for="exampleFormControlTextarea1" class="form-label"></label>
-							<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+							<textarea class="form-control" id="exampleFormControlTextarea1" name="message" placeholder="Message" rows="3" required></textarea>
 						</div>
-						<div class=" text-center pt-3"> <button type="button" class="btn btn-outline-dark">SEND MESSAGE</button></div>
+						<div class=" text-center pt-3"> <button type="submit" name="submit" value="submit" class="btn btn-outline-dark">SEND MESSAGE</button></div>
 
 				</form>
+
 			</div>
+
 		</section>
-		<hr>
+		<hr class="container">
+
 	</main>
 	<footer>
 		<div class="footer">
