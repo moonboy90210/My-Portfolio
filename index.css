@@ -239,7 +239,7 @@ img {
     width: 100%;
     max-width: 420px;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: fadeInUp 0.8s ease backwards;
+    /* animation: fadeInUp 0.8s ease backwards; */
     opacity: 0.6;
     transform: translate(-50%, -50%) scale(0.85) translateX(0);
     z-index: 1;
