@@ -13,6 +13,6 @@ if (mysqli_connect_errno()) {
     exit();
 
 } else {
-    // echo "Database Connected Successfully!";
+    // echo "Database Connected Successfully!!";
    
 }

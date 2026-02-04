@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = test_input($_POST["email"]);
     $message = test_input($_POST["message"]);
 
-    $to = "youremail@example.com"; // Replace with your email address
+    $to = $myMail; 
     $subject = "Portfolio Contact Form Submission";
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
 
